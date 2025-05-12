@@ -1,148 +1,166 @@
 <!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LM Vinilos - Día del Padre</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LM Vinilos - Especial Día del Padre</title>
   <style>
     body {
-      font-family: 'Playfair Display', serif;
-      background-color: #ffffff;
-      color: #000000;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', cursive;
+      background-color: #fff;
+      color: #222;
     }
     header {
-      background: linear-gradient(to right, #0d0d0d, #0f52ba);
+      background: linear-gradient(135deg, #000428, #004e92);
       color: white;
+      padding: 2rem;
       text-align: center;
-      padding: 1.5rem;
-      font-size: 1.6rem;
+    }
+    h1 {
+      font-size: 2rem;
       font-weight: bold;
     }
     .carousel {
       display: flex;
       overflow-x: auto;
+      scroll-snap-type: x mandatory;
       gap: 1rem;
       padding: 1rem;
-      scroll-snap-type: x mandatory;
     }
     .carousel img {
-      width: 300px;
-      height: auto;
-      border-radius: 10px;
-      scroll-snap-align: start;
+      width: 80%;
+      max-width: 300px;
+      border-radius: 20px;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .model-buttons {
+    .botones-modelos button,
+    .botones-medidas button {
+      margin: 0.5rem;
+      padding: 0.8rem 1.2rem;
+      border-radius: 12px;
+      border: none;
+      background: #004e92;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .botones-modelos,
+    .botones-medidas {
       text-align: center;
       margin-top: 1rem;
     }
-    .model-buttons button {
-      background-color: #0f52ba;
-      color: white;
-      border: none;
-      margin: 0.5rem;
-      padding: 0.7rem 1.2rem;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    .options {
+    .precio {
       text-align: center;
-      margin-top: 2rem;
-    }
-    .options p {
-      font-size: 1.1rem;
-      margin: 0.5rem;
-    }
-    .buy-button {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .buy-button a {
-      background-color: #000000;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 30px;
-      text-decoration: none;
+      margin: 1rem 0;
       font-size: 1.2rem;
+      font-weight: bold;
     }
-    .testimonial-section {
+    .boton-whatsapp {
+      display: block;
+      width: 80%;
+      margin: 1rem auto;
+      background: #25D366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+    .mensaje-emotivo {
       padding: 2rem;
-      background-color: #f9f9f9;
+      text-align: center;
+      background-color: #f2f2f2;
+      font-style: italic;
     }
-    .testimonial-carousel {
+    .reseñas {
+      padding: 2rem;
+      background-color: #fafafa;
+    }
+    .reseña-carrusel {
       display: flex;
       overflow-x: auto;
-      gap: 1.5rem;
       scroll-snap-type: x mandatory;
+      gap: 1rem;
     }
-    .testimonial {
-      min-width: 300px;
-      max-width: 320px;
+    .reseña {
+      min-width: 250px;
+      max-width: 250px;
+      background: #fff;
+      border-radius: 10px;
       padding: 1rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      scroll-snap-align: start;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      scroll-snap-align: center;
     }
-    .stars {
-      color: gold;
-    }
-    .social-buttons {
+    footer {
       text-align: center;
-      margin: 2rem 0;
+      padding: 2rem;
     }
-    .social-buttons a {
+    footer a {
       margin: 0 1rem;
+      color: #004e92;
       text-decoration: none;
-      font-size: 1.5rem;
-      color: #0f52ba;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
-    LM Vinilos - Especial Día del Padre
-  </header>  <div class="carousel">
-    <img src="images/modelo1.jpg" alt="Modelo 1">
-    <img src="images/modelo2.jpg" alt="Modelo 2">
-    <img src="images/modelo3.jpg" alt="Modelo 3">
-    <img src="images/modelo4.jpg" alt="Modelo 4">
-  </div>  <div class="model-buttons">
+    <h1>LM Vinilos - Especial Día del Padre</h1>
+  </header>  <section class="carousel">
+    <img src="images/modelo1.jpg" alt="Modelo 1" />
+    <img src="images/modelo2.jpg" alt="Modelo 2" />
+    <img src="images/modelo3.jpg" alt="Modelo 3" />
+    <img src="images/modelo4.jpg" alt="Modelo 4" />
+  </section>  <div class="botones-modelos">
     <button>Modelo 1</button>
     <button>Modelo 2</button>
     <button>Modelo 3</button>
     <button>Modelo 4</button>
-  </div>  <div class="options">
-    <p><strong>Medida:</strong> 20x30 cm - $18.000 ARS</p>
-    <p><strong>Medida:</strong> 15x20 cm - $15.000 ARS</p>
-    <p><strong>Medios de Pago:</strong> Transferencia Brubank, efectivo, QR</p>
-  </div>  <div class="buy-button">
-    <a href="https://wa.me/5492966743381?text=Hola%20quiero%20comprar%20una%20placa%20personalizada%20para%20el%20D%C3%ADa%20del%20Padre">Comprar Ahora</a>
-  </div>  <div class="testimonial-section">
-    <h2 style="text-align:center; font-size:1.6rem;">Lo que opinan nuestros clientes</h2>
-    <div class="testimonial-carousel">
-      <!-- Aquí se insertan más de 30 reseñas -->
-      <div class="testimonial">
-        <p><strong>María López</strong> - 2 semanas atrás</p>
-        <p class="stars">★★★★★</p>
-        <p>Hermosa placa personalizada para el Día del Padre. Mi papá se emocionó hasta las lágrimas.</p>
-        <p><em>Respuesta:</em> ¡Gracias María! Qué alegría saberlo.</p>
-      </div>
-      <div class="testimonial">
-        <p><strong>Julián Pérez</strong> - 1 mes atrás</p>
-        <p class="stars">★★★★★</p>
-        <p>La placa de Spotify fue un golazo. Muy buena calidad y entrega rápida.</p>
-        <p><em>Respuesta:</em> ¡Gracias Julián por confiar en LM Vinilos!</p>
-      </div>
-      <!-- Agregar 30+ testimonios similares aquí... -->
+  </div>  <div class="botones-medidas">
+    <button onclick="elegirMedida('20x30 cm - $18.000')">20x30 cm - $18.000</button>
+    <button onclick="elegirMedida('15x20 cm - $15.000')">15x20 cm - $15.000</button>
+  </div>  <div class="precio" id="precio-seleccionado">Seleccioná una medida</div>  <a class="boton-whatsapp" id="boton-wsp" href="https://wa.me/5492966743381" target="_blank">
+    Realizar pedido
+  </a>  <div class="mensaje-emotivo">
+    Una placa personalizada es mucho más que un regalo. Es una emoción capturada en vidrio. Para un papá que merece recordar todos los días cuánto lo aman. Regalá algo único, personal, eterno.
+  </div>  <div class="reseñas">
+    <h2 style="text-align:center;">Lo que dicen nuestros clientes</h2>
+    <div class="reseña-carrusel">
+      <!-- Aquí van reseñas (solo muestro algunas como ejemplo) -->
+      <div class="reseña">“La placa de San Valentín fue el mejor regalo que hice. ¡Hermosa calidad!” - Florencia</div>
+      <div class="reseña">“Mi papá lloró al verla. Gracias LM Vinilos por tanto.” - Jorge</div>
+      <div class="reseña">“Excelente presentación, muy detallada.” - Carla</div>
+      <div class="reseña">“Le regalé una a mi novio y la amó.” - Mariana</div>
+      <div class="reseña">“Llegó rápido, atención impecable.” - David</div>
+      <div class="reseña">“Mi mamá quedó fascinada. Muy recomendables.” - Lucía</div>
+      <div class="reseña">“Les pedí algo especial y cumplieron al 100%.” - Pablo</div>
+      <div class="reseña">“Volvería a comprar sin dudas.” - Natalia</div>
+      <div class="reseña">“El detalle del código Spotify fue increíble.” - Sergio</div>
+      <div class="reseña">“Perfecto para fechas especiales.” - Camila</div>
+      <div class="reseña">“Super delicado y original.” - Belén</div>
+      <div class="reseña">“Gracias por ayudarnos a sorprender.” - Matías</div>
+      <div class="reseña">“Hermoso diseño y entrega puntual.” - Ayelén</div>
+      <div class="reseña">“Mi esposo se emocionó muchísimo.” - Carolina</div>
+      <div class="reseña">“Los colores, el vidrio, todo perfecto.” - Tomás</div>
+      <div class="reseña">“Regalo con sentimiento, súper personalizado.” - Lorena</div>
+      <div class="reseña">“Les encantó en casa. Muy buena atención.” - Andrés</div>
+      <div class="reseña">“Regalé para el Día del Padre y fue un éxito.” - Vanesa</div>
+      <div class="reseña">“Ya compré 3 veces. ¡Increíbles!” - Romina</div>
+      <div class="reseña">“Algo distinto y muy emocional.” - Federico</div>
     </div>
-  </div>  <div class="social-buttons">
-    <a href="https://www.instagram.com/lmvinilos.rg" target="_blank">Instagram</a>
+  </div>  <footer>
     <a href="https://www.facebook.com/share/15wkYuAX6M/" target="_blank">Facebook</a>
-  </div>
-</body>
+    <a href="https://www.instagram.com/lmvinilos.rg/" target="_blank">Instagram</a>
+  </footer>  <script>
+    let medidaSeleccionada = '';
+
+    function elegirMedida(medida) {
+      medidaSeleccionada = medida;
+      document.getElementById('precio-seleccionado').textContent = `Seleccionaste: ${medida}`;
+      document.getElementById('boton-wsp').href = `https://wa.me/5492966743381?text=Hola! Quiero hacer un pedido de placa de vidrio personalizada con medida ${medida}`;
+    }
+  </script></body>
 </html>

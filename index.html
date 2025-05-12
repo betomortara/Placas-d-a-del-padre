@@ -1,172 +1,55 @@
 <!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LM Vinilos | Placas Personalizadas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LM Vinilos - Placas Personalizadas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #FAFAFA;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(180deg, #ffffff, #f8f8f8);
       color: #333;
     }
     header {
-      background: linear-gradient(90deg, #005C97, #363795);
-      padding: 1.5rem;
+      background-color: #ffffff;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
-    header img {
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
       height: 60px;
+      margin-right: 1rem;
     }
     nav a {
-      margin-left: 1.5rem;
-      color: white;
       text-decoration: none;
+      color: #333;
+      margin-left: 2rem;
       font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #007BFF;
     }
     .hero {
-      background: url('https://images.unsplash.com/photo-1617957742066-7e5cb8faeccd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      padding: 4rem 2rem;
-      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1586281380395-cba0e6c4f37d');
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 2rem;
       color: white;
-      position: relative;
+      text-align: center;
     }
-    .hero h2 {
+    .hero h1 {
       font-size: 3rem;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    }
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
-    .boton {
-      background-color: #FF6B35;
-      color: white;
-      padding: 1rem 2rem;
-      font-weight: bold;
-      font-size: 1rem;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .boton:hover {
-      background-color: #e65a2e;
-    }
-    .medidas {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .medidas button {
-      background-color: #0076AA;
-      color: white;
-      border: 2px solid transparent;
-      margin: 0.5rem;
-      padding: 0.8rem 1.5rem;
-      font-weight: bold;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .medidas button.selected {
-      border-color: #FF6B35;
-      background-color: #fff;
-      color: #0076AA;
-    }
-    .galeria {
-      padding: 2rem;
-      background-color: #f4f4f4;
-    }
-    .swiper {
-      width: 95%;
-      padding-bottom: 3rem;
-    }
-    .swiper-slide img {
-      border-radius: 15px;
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-    }
-    .footer {
-      background-color: #1e1e1e;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-    .footer .social-icons img {
-      width: 40px;
-      margin: 0 10px;
-      transition: transform 0.2s;
-    }
-    .footer .social-icons img:hover {
-      transform: scale(1.1);
-    }
-    .footer p {
-      margin-top: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="logo_lm_vinilos.png" alt="LM Vinilos logo">
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#galeria">Modelos</a>
-      <a href="#">Testimonios</a>
-      <a href="#">Contacto</a>
-    </nav>
-  </header>  <section class="hero">
-    <h2>Regalá emociones inolvidables</h2>
-    <p>Placas personalizadas con tu canción, fecha o foto especial</p>
-    <button class="boton" onclick="document.getElementById('galeria').scrollIntoView({behavior:'smooth'})">Ver modelos</button>
-  </section>  <section class="medidas">
-    <h3>Elegí la medida de tu placa</h3>
-    <button onclick="selectMedida(this)">15x20 cm</button>
-    <button onclick="selectMedida(this)">20x25 cm</button>
-  </section>  <section id="galeria" class="galeria">
-    <h3 style="text-align:center;">Nuestros diseños</h3>
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/products/PlacaPAPA-DiadelPadre.jpg?v=1680764289&width=700"></div>
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Regalosparaamigas.jpg?v=1744710099&width=700"></div>
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placaregaloaniversario.jpg?v=1686123458&width=700"></div>
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_Cora_o_Personalizada.jpg?v=1744286877&width=700"></div>
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_cumple_con_foto.jpg?v=1728397351&width=700"></div>
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_mapa_coraz_n.png?v=1744708277"></div>
-      </div>
-    </div>
-  </section>  <footer class="footer">
-    <div class="social-icons">
-      <a href="https://facebook.com/lmvinilos.rg" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" alt="Facebook">
-      </a>
-      <a href="https://instagram.com/lmvinilos.rg" target="_blank">
-        <img src="https://img.freepik.com/vector-premium/icono-logotipo-vector-instagram-logotipo-redes-sociales_901408-392.jpg?semt=ais_hybrid&w=740" alt="Instagram">
-      </a>
-    </div>
-    <p>Río Gallegos, Santa Cruz | Envíos a todo el país</p>
-    <p>&copy; 2025 LM Vinilos</p>
-  </footer>  <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2024/03/11/audio_87837e2a37.mp3" type="audio/mp3">
-  </audio>  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>  <script>
-    new Swiper('.swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 30,
-      centeredSlides: true,
-      loop: true,
-      autoplay: { delay: 4000 },
-    });
-
-    function selectMedida(button) {
-      document.querySelectorAll('.medidas button').forEach(btn => btn.classList.remove('selected'));
-      button.classList.add('selected');
-    }
-  </script></body>
-</html>

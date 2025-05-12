@@ -2,207 +2,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LM Vinilos | Placas Personalizadas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>LM Vinilos - Regalos Personalizados con Emoción</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    :root {
+      --color-principal: #2D3142;
+      --color-secundario: #EF8354;
+      --fondo-claro: #F7F7F7;
+      --gris: #BFC0C0;
+    }
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #F6F8F6;
-      color: #333;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--fondo-claro);
+      color: var(--color-principal);
     }
     header {
-      background-color: #0076AA;
+      background-color: var(--color-principal);
       color: white;
-      padding: 1rem 2rem;
+      padding: 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    header h1 {
-      margin: 0;
+    header img {
+      height: 60px;
     }
     nav a {
-      margin-left: 1rem;
       color: white;
+      margin-left: 1rem;
       text-decoration: none;
       font-weight: 600;
     }
     .hero {
-      background-color: #E0F7FA;
-      padding: 3rem 2rem;
+      background: url('https://images.unsplash.com/photo-1605005773822-35adbe206f92?fit=crop&w=1950&q=80') center/cover;
+      color: white;
+      padding: 4rem 2rem;
       text-align: center;
     }
-    .hero h2 {
-      font-size: 2.5rem;
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
       margin-bottom: 1rem;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-bottom: 2rem;
     }
-    .boton {
-      background-color: #0076AA;
+    .btn-principal {
+      background-color: var(--color-secundario);
       color: white;
-      padding: 1rem 2rem;
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-    .opciones-medidas {
-      text-align: center;
-      margin: 2rem auto;
-    }
-    .opciones-medidas button {
-      background-color: #A4B4F2;
       border: none;
       padding: 1rem 2rem;
-      margin: 0.5rem;
-      border-radius: 10px;
-      font-weight: 600;
-      cursor: pointer;
       font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
     }
-    .productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-      justify-items: center;
-    }
-    .producto {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    .galeria {
+      padding: 3rem 2rem;
       text-align: center;
-    }
-    .producto img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    .producto h4 {
-      margin-top: 1rem;
-    }
-    .testimonios {
-      padding: 2rem;
     }
     .swiper {
       width: 90%;
-      margin: 2rem auto;
+      margin: auto;
     }
-    .swiper-slide {
-      background-color: white;
-      border-radius: 10px;
+    .swiper-slide img {
+      width: 100%;
+      border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      margin-right: 1rem;
     }
-    .footer {
-      background-color: #333;
+    .opciones {
+      padding: 2rem;
+      text-align: center;
+    }
+    .opciones h2 {
+      margin-bottom: 1rem;
+    }
+    .medidas {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .medidas button {
+      padding: 1rem 2rem;
+      background-color: var(--color-principal);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .whatsapp {
+      margin-top: 2rem;
+    }
+    .whatsapp a {
+      background-color: #25D366;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .redes {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .redes img {
+      height: 40px;
+      margin: 0 1rem;
+    }
+    footer {
+      background-color: var(--color-principal);
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 1rem;
     }
-    .footer img {
-      width: 40px;
-      margin: 0 10px;
-    }
-    .logo-final {
-      max-width: 200px;
-      margin-top: 2rem;
+    audio {
+      display: block;
+      margin: 2rem auto;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>LM Vinilos</h1>
+    <img src="/mnt/data/file-18xdJkrG4wVUFjvDJ1fuLx" alt="LM Vinilos logo">
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Productos</a>
-      <a href="#">Testimonios</a>
-      <a href="#">Contacto</a>
+      <a href="#galeria">Productos</a>
+      <a href="#medidas">Medidas</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>  <section class="hero">
-    <h2>Placas de vidrio personalizadas</h2>
-    <p>Diseñá el regalo perfecto con nosotros. Se acerca el Día del Padre: ¡aprovechá!</p>
-    <button class="boton">¡Realizar pedido ahora!</button>
-  </section>  <section class="opciones-medidas">
-    <h3>Elegí la medida de tu placa</h3>
-    <button>15x20 cm</button>
-    <button>20x25 cm</button>
-  </section>  <section class="productos">
-    <div class="producto">
-      <img src="https://cristalplaque.com/cdn/shop/products/PlacaPAPA-DiadelPadre.jpg?v=1680764289&width=700" alt="Día del Padre">
-      <h4>Placa Día del Padre</h4>
-    </div>
-    <div class="producto">
-      <img src="https://cristalplaque.com/cdn/shop/files/Regalosparaamigas.jpg?v=1744710099&width=700" alt="Día del Amigo">
-      <h4>Placa Día del Amigo</h4>
-    </div>
-    <div class="producto">
-      <img src="https://cristalplaque.com/cdn/shop/files/Placaregaloaniversario.jpg?v=1686123458&width=700" alt="Amor Tu y Yo">
-      <h4>Placa Tu y Yo</h4>
-    </div>
-    <div class="producto">
-      <img src="https://cristalplaque.com/cdn/shop/files/Placa_Cora_o_Personalizada.jpg?v=1744286877&width=700" alt="Corazón Personalizada">
-      <h4>Placa Corazón</h4>
-    </div>
-    <div class="producto">
-      <img src="https://cristalplaque.com/cdn/shop/files/Placa_cumple_con_foto.jpg?v=1728397351&width=700" alt="Cumpleaños">
-      <h4>Placa Cumpleaños</h4>
-    </div>
-    <div class="producto">
-      <img src="https://cristalplaque.com/cdn/shop/files/Placa_mapa_coraz_n.png?v=1744708277" alt="Mapa del Corazón">
-      <h4>Mapa del Corazón</h4>
-    </div>
-  </section>  <section class="testimonios">
-    <h3 style="text-align: center;">Reseñas de nuestros clientes</h3>
+    <h1>¡Regalá emociones inolvidables!</h1>
+    <p>Placas personalizadas para el Día del Padre, aniversarios, cumpleaños y más.</p>
+    <button class="btn-principal" onclick="document.querySelector('#galeria').scrollIntoView({ behavior: 'smooth' })">Ver modelos</button>
+  </section>  <section class="galeria" id="galeria">
     <div class="swiper">
       <div class="swiper-wrapper">
-        <!-- Aquí se insertan dinámicamente las reseñas -->
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/products/PlacaPAPA-DiadelPadre.jpg?v=1680764289&width=700" alt="Día del padre"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Regalosparaamigas.jpg?v=1744710099&width=700" alt="Día del amigo"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placaregaloaniversario.jpg?v=1686123458&width=700" alt="Tú y yo"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_Cora_o_Personalizada.jpg?v=1744286877&width=700" alt="Corazón personalizado"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_cumple_con_foto.jpg?v=1728397351&width=700" alt="Cumpleaños"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_mapa_coraz_n.png?v=1744708277" alt="Mapa del corazón"></div>
       </div>
     </div>
-  </section>  <div style="text-align: center;">
+  </section>  <section class="opciones" id="medidas">
+    <h2>Elegí tu medida</h2>
+    <div class="medidas">
+      <button onclick="seleccionarMedida('15x20 cm', '15000')">15x20 cm - $15.000</button>
+      <button onclick="seleccionarMedida('20x25 cm', '18000')">20x25 cm - $18.000</button>
+    </div>
+    <div class="whatsapp">
+      <a id="btn-wpp" href="" target="_blank">Hacer pedido por WhatsApp</a>
+    </div>
+  </section>  <div class="redes">
+    <a href="https://facebook.com/lmvinilos.rg" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" alt="Facebook">
+    </a>
     <a href="https://instagram.com/lmvinilos.rg" target="_blank">
       <img src="https://img.freepik.com/vector-premium/icono-logotipo-vector-instagram-logotipo-redes-sociales_901408-392.jpg?semt=ais_hybrid&w=740" alt="Instagram">
     </a>
-    <a href="https://www.facebook.com/share/15wkYuAX6M/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" alt="Facebook">
-    </a>
-  </div>  <div style="text-align: center;">
-    <img src="logo.png" alt="Logo LM Vinilos" class="logo-final">
-  </div>  <div style="text-align: center; font-weight: bold; margin-top: 1rem;">
-    Desde Río Gallegos, Santa Cruz - Los mejores en regalos personalizados
-  </div>  <!-- Música de fondo -->  <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2023/05/20/audio_3dce76a8c1.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio.
-  </audio>  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>  <script>
-    const reseñas = [
-      "Compré una placa Spotify para mi novio y quedó fascinado. ¡Hermoso trabajo!",
-      "Para el Día de la Madre, le regalamos una placa con nuestra canción. Lloró de emoción.",
-      "¡Perfecto para San Valentín! Llegó en tiempo y la calidad es excelente.",
-      "Mis hijos amaron ver la canción que escuchamos siempre impresa. Un recuerdo hermoso.",
-      "Muy buena atención. Todo personalizado tal cual lo pedí."
-    ];
-
-    const wrapper = document.querySelector('.swiper-wrapper');
-    reseñas.forEach(texto => {
-      const slide = document.createElement('div');
-      slide.className = 'swiper-slide';
-      slide.textContent = texto;
-      wrapper.appendChild(slide);
-    });
-
+  </div>  <audio controls autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2024/04/09/audio_d6a3f44f6c.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>  <footer>
+    LM Vinilos - Río Gallegos, Santa Cruz. Productos personalizados con corazón.
+  </footer>  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>  <script>
     new Swiper('.swiper', {
       loop: true,
-      autoplay: { delay: 4000 },
+      autoplay: { delay: 3000 },
       slidesPerView: 1,
+      spaceBetween: 20,
     });
+
+    function seleccionarMedida(medida, precio) {
+      const texto = `Hola! Quiero hacer un pedido:\n\nMedida: ${medida}\nPrecio: $${precio}\n¿Podemos avanzar?`;
+      const enlace = `https://wa.me/542966743381?text=${encodeURIComponent(texto)}`;
+      document.getElementById('btn-wpp').href = enlace;
+    }
   </script></body>
 </html>

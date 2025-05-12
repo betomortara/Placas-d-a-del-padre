@@ -2,189 +2,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LM Vinilos - Regalos Personalizados con Emoción</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>LM Vinilos | Placas Personalizadas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <style>
-    :root {
-      --color-principal: #2D3142;
-      --color-secundario: #EF8354;
-      --fondo-claro: #F7F7F7;
-      --gris: #BFC0C0;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: var(--fondo-claro);
-      color: var(--color-principal);
+      margin: 0;
+      padding: 0;
+      background-color: #FAFAFA;
+      color: #333;
     }
     header {
-      background-color: var(--color-principal);
-      color: white;
+      background: linear-gradient(90deg, #005C97, #363795);
       padding: 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: white;
     }
     header img {
       height: 60px;
     }
     nav a {
+      margin-left: 1.5rem;
       color: white;
-      margin-left: 1rem;
       text-decoration: none;
       font-weight: 600;
     }
     .hero {
-      background: url('https://images.unsplash.com/photo-1605005773822-35adbe206f92?fit=crop&w=1950&q=80') center/cover;
-      color: white;
+      background: url('https://images.unsplash.com/photo-1617957742066-7e5cb8faeccd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       padding: 4rem 2rem;
       text-align: center;
+      color: white;
+      position: relative;
     }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
+    .hero h2 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     }
     .hero p {
       font-size: 1.3rem;
       margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
-    .btn-principal {
-      background-color: var(--color-secundario);
+    .boton {
+      background-color: #FF6B35;
       color: white;
-      border: none;
       padding: 1rem 2rem;
+      font-weight: bold;
       font-size: 1rem;
-      border-radius: 8px;
+      border: none;
+      border-radius: 30px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
-    .galeria {
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .swiper {
-      width: 90%;
-      margin: auto;
-    }
-    .swiper-slide img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .opciones {
-      padding: 2rem;
-      text-align: center;
-    }
-    .opciones h2 {
-      margin-bottom: 1rem;
+    .boton:hover {
+      background-color: #e65a2e;
     }
     .medidas {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .medidas button {
-      padding: 1rem 2rem;
-      background-color: var(--color-principal);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .whatsapp {
-      margin-top: 2rem;
-    }
-    .whatsapp a {
-      background-color: #25D366;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .redes {
       text-align: center;
       margin: 2rem 0;
     }
-    .redes img {
-      height: 40px;
-      margin: 0 1rem;
+    .medidas button {
+      background-color: #0076AA;
+      color: white;
+      border: 2px solid transparent;
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
     }
-    footer {
-      background-color: var(--color-principal);
+    .medidas button.selected {
+      border-color: #FF6B35;
+      background-color: #fff;
+      color: #0076AA;
+    }
+    .galeria {
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .swiper {
+      width: 95%;
+      padding-bottom: 3rem;
+    }
+    .swiper-slide img {
+      border-radius: 15px;
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+    .footer {
+      background-color: #1e1e1e;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 2rem;
     }
-    audio {
-      display: block;
-      margin: 2rem auto;
+    .footer .social-icons img {
+      width: 40px;
+      margin: 0 10px;
+      transition: transform 0.2s;
+    }
+    .footer .social-icons img:hover {
+      transform: scale(1.1);
+    }
+    .footer p {
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="/mnt/data/file-18xdJkrG4wVUFjvDJ1fuLx" alt="LM Vinilos logo">
+    <img src="logo_lm_vinilos.png" alt="LM Vinilos logo">
     <nav>
-      <a href="#galeria">Productos</a>
-      <a href="#medidas">Medidas</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#">Inicio</a>
+      <a href="#galeria">Modelos</a>
+      <a href="#">Testimonios</a>
+      <a href="#">Contacto</a>
     </nav>
   </header>  <section class="hero">
-    <h1>¡Regalá emociones inolvidables!</h1>
-    <p>Placas personalizadas para el Día del Padre, aniversarios, cumpleaños y más.</p>
-    <button class="btn-principal" onclick="document.querySelector('#galeria').scrollIntoView({ behavior: 'smooth' })">Ver modelos</button>
-  </section>  <section class="galeria" id="galeria">
+    <h2>Regalá emociones inolvidables</h2>
+    <p>Placas personalizadas con tu canción, fecha o foto especial</p>
+    <button class="boton" onclick="document.getElementById('galeria').scrollIntoView({behavior:'smooth'})">Ver modelos</button>
+  </section>  <section class="medidas">
+    <h3>Elegí la medida de tu placa</h3>
+    <button onclick="selectMedida(this)">15x20 cm</button>
+    <button onclick="selectMedida(this)">20x25 cm</button>
+  </section>  <section id="galeria" class="galeria">
+    <h3 style="text-align:center;">Nuestros diseños</h3>
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/products/PlacaPAPA-DiadelPadre.jpg?v=1680764289&width=700" alt="Día del padre"></div>
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Regalosparaamigas.jpg?v=1744710099&width=700" alt="Día del amigo"></div>
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placaregaloaniversario.jpg?v=1686123458&width=700" alt="Tú y yo"></div>
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_Cora_o_Personalizada.jpg?v=1744286877&width=700" alt="Corazón personalizado"></div>
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_cumple_con_foto.jpg?v=1728397351&width=700" alt="Cumpleaños"></div>
-        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_mapa_coraz_n.png?v=1744708277" alt="Mapa del corazón"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/products/PlacaPAPA-DiadelPadre.jpg?v=1680764289&width=700"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Regalosparaamigas.jpg?v=1744710099&width=700"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placaregaloaniversario.jpg?v=1686123458&width=700"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_Cora_o_Personalizada.jpg?v=1744286877&width=700"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_cumple_con_foto.jpg?v=1728397351&width=700"></div>
+        <div class="swiper-slide"><img src="https://cristalplaque.com/cdn/shop/files/Placa_mapa_coraz_n.png?v=1744708277"></div>
       </div>
     </div>
-  </section>  <section class="opciones" id="medidas">
-    <h2>Elegí tu medida</h2>
-    <div class="medidas">
-      <button onclick="seleccionarMedida('15x20 cm', '15000')">15x20 cm - $15.000</button>
-      <button onclick="seleccionarMedida('20x25 cm', '18000')">20x25 cm - $18.000</button>
+  </section>  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://facebook.com/lmvinilos.rg" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com/lmvinilos.rg" target="_blank">
+        <img src="https://img.freepik.com/vector-premium/icono-logotipo-vector-instagram-logotipo-redes-sociales_901408-392.jpg?semt=ais_hybrid&w=740" alt="Instagram">
+      </a>
     </div>
-    <div class="whatsapp">
-      <a id="btn-wpp" href="" target="_blank">Hacer pedido por WhatsApp</a>
-    </div>
-  </section>  <div class="redes">
-    <a href="https://facebook.com/lmvinilos.rg" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" alt="Facebook">
-    </a>
-    <a href="https://instagram.com/lmvinilos.rg" target="_blank">
-      <img src="https://img.freepik.com/vector-premium/icono-logotipo-vector-instagram-logotipo-redes-sociales_901408-392.jpg?semt=ais_hybrid&w=740" alt="Instagram">
-    </a>
-  </div>  <audio controls autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2024/04/09/audio_d6a3f44f6c.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio HTML5.
-  </audio>  <footer>
-    LM Vinilos - Río Gallegos, Santa Cruz. Productos personalizados con corazón.
-  </footer>  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>  <script>
+    <p>Río Gallegos, Santa Cruz | Envíos a todo el país</p>
+    <p>&copy; 2025 LM Vinilos</p>
+  </footer>  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2024/03/11/audio_87837e2a37.mp3" type="audio/mp3">
+  </audio>  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>  <script>
     new Swiper('.swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      centeredSlides: true,
       loop: true,
-      autoplay: { delay: 3000 },
-      slidesPerView: 1,
-      spaceBetween: 20,
+      autoplay: { delay: 4000 },
     });
 
-    function seleccionarMedida(medida, precio) {
-      const texto = `Hola! Quiero hacer un pedido:\n\nMedida: ${medida}\nPrecio: $${precio}\n¿Podemos avanzar?`;
-      const enlace = `https://wa.me/542966743381?text=${encodeURIComponent(texto)}`;
-      document.getElementById('btn-wpp').href = enlace;
+    function selectMedida(button) {
+      document.querySelectorAll('.medidas button').forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
     }
   </script></body>
 </html>

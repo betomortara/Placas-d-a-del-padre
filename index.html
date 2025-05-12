@@ -1,59 +1,95 @@
-
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regalos Día del Padre - LM Vinilos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-        header {
-            background-color: #1a1a1a;
-            color: white;
-            padding: 1rem;
-        }
-        img {
-            width: 90%;
-            max-width: 400px;
-            margin: 1rem 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        a.whatsapp {
-            display: inline-block;
-            margin: 2rem auto;
-            padding: 1rem 2rem;
-            background-color: #25D366;
-            color: white;
-            font-size: 1.2rem;
-            text-decoration: none;
-            border-radius: 25px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LM Vinilos - Día del Padre</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header { background-color: #111; color: #fff; padding: 1rem; text-align: center; font-size: 1.5rem; }
+    .carousel { display: flex; overflow-x: scroll; scroll-snap-type: x mandatory; gap: 1rem; padding: 1rem; }
+    .carousel img { max-width: 90%; height: auto; border-radius: 10px; scroll-snap-align: center; }
+    .section { padding: 1rem; }
+    .btn-group button { margin: 5px; padding: 10px; background-color: #444; color: white; border: none; border-radius: 5px; }
+    .price-box { margin-top: 1rem; font-size: 1.2rem; }
+    .payment-methods { margin: 1rem 0; }
+    .cta { margin-top: 20px; text-align: center; }
+    .cta a { background-color: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    footer { margin-top: 2rem; background: #eee; padding: 1rem; text-align: center; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Regalos Personalizados para Papá</h1>
-        <p>Placas acrílicas únicas para el Día del Padre</p>
-    </header>
 
-    <main>
-        <img src="modelo_1.jpg" alt="Modelo 1">
-        <img src="modelo_2.jpg" alt="Modelo 2">
-        <img src="modelo_3.jpg" alt="Modelo 3">
-        <img src="modelo_4.jpg" alt="Modelo 4">
+<header>
+  LM Vinilos - Especial Día del Padre
+</header>
 
-        <a class="whatsapp" href="https://wa.me/5492966743381" target="_blank">
-            Hacé tu pedido por WhatsApp
-        </a>
-    </main>
+<div class="carousel">
+  <img src="modelo1.jpg" alt="Modelo 1"/>
+  <img src="modelo2.jpg" alt="Modelo 2"/>
+  <img src="modelo3.jpg" alt="Modelo 3"/>
+  <img src="modelo4.jpg" alt="Modelo 4"/>
+</div>
+
+<div class="section">
+  <h3>Elegí tu modelo:</h3>
+  <div class="btn-group">
+    <button onclick="selectModel('Modelo 1')">Modelo 1</button>
+    <button onclick="selectModel('Modelo 2')">Modelo 2</button>
+    <button onclick="selectModel('Modelo 3')">Modelo 3</button>
+    <button onclick="selectModel('Modelo 4')">Modelo 4</button>
+  </div>
+
+  <h3>Elegí el tamaño:</h3>
+  <div class="btn-group">
+    <button onclick="selectSize('20x30', 18000)">20x30 cm - $18.000 ARS</button>
+    <button onclick="selectSize('15x20', 15000)">15x20 cm - $15.000 ARS</button>
+  </div>
+
+  <div class="price-box" id="selectedInfo">
+    Seleccioná un modelo y medida para ver el detalle.
+  </div>
+
+  <div class="payment-methods">
+    <p><strong>Medios de pago:</strong> Transferencia Brubank, efectivo, mercado pago o QR.</p>
+  </div>
+
+  <div class="cta">
+    <a id="whatsappBtn" href="#" target="_blank">Comprar ahora por WhatsApp</a>
+  </div>
+</div>
+
+<footer>
+  <p>Regalar una placa es mucho más que un objeto. Es inmortalizar un momento, una canción, una conexión con papá. Sorprendelo con algo que va directo al corazón.</p>
+</footer>
+
+<script>
+  let modelo = '';
+  let medida = '';
+  let precio = 0;
+
+  function selectModel(name) {
+    modelo = name;
+    updateInfo();
+  }
+
+  function selectSize(size, price) {
+    medida = size;
+    precio = price;
+    updateInfo();
+  }
+
+  function updateInfo() {
+    if (modelo && medida) {
+      document.getElementById("selectedInfo").innerText = 
+        `Elegiste: ${modelo}, medida ${medida}, precio $${precio} ARS`;
+
+      const mensaje = `Hola! Quiero comprar una placa del Día del Padre:\nModelo: ${modelo}\nMedida: ${medida}\nPrecio: $${precio} ARS`;
+      const encodedMsg = encodeURIComponent(mensaje);
+      document.getElementById("whatsappBtn").href = `https://wa.me/5492966743381?text=${encodedMsg}`;
+    }
+  }
+</script>
+
 </body>
 </html>

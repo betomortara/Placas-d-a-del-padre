@@ -2,7 +2,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LM Vinilos | Placas Personalizadas</title>
+  <title>LM Vinilos | El regalo más emocional</title>
+  <meta name="description" content="Convertí tu canción favorita en una placa personalizada única. Sorprendé a quienes más querés con un regalo que emociona.">
+  <meta property="og:title" content="Placas Spotify Personalizadas | LM Vinilos">
+  <meta property="og:description" content="Placas de vidrio con tu canción favorita. Sorprendé en aniversarios, cumpleaños o Día del Padre.">
+  <meta property="og:image" content="https://lmvinilos.com/preview.jpg">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <style>
@@ -21,61 +26,154 @@
       justify-content: space-between;
       align-items: center;
     }
-    header h1 {
-      margin: 0;
-    }
+    header h1 { margin: 0; }
     nav a {
       margin-left: 1rem;
       color: white;
       text-decoration: none;
       font-weight: 600;
     }
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
     .hero {
-      background-color: #E0F7FA;
+      background: linear-gradient(135deg, #FFF3E0, #E1F5FE);
       padding: 3rem 2rem;
       text-align: center;
     }
     .hero h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
+      color: #212121;
       margin-bottom: 1rem;
     }
     .hero p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin-bottom: 2rem;
     }
-    .boton {
-      background-color: #0076AA;
+    .cta-btn {
+      background-color: #FF6F00;
       color: white;
       padding: 1rem 2rem;
       border: none;
       font-weight: 600;
       cursor: pointer;
       border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .cta-btn:hover {
+      background-color: #e65100;
     }
     .opciones-medidas {
       text-align: center;
-      margin: 2rem auto;
     }
     .opciones-medidas button {
       background-color: #A4B4F2;
       border: none;
-      padding: 1rem;
+      padding: 1rem 1.5rem;
       margin: 0.5rem;
       border-radius: 10px;
       font-weight: 600;
       cursor: pointer;
     }
+    .opciones-medidas small {
+      display: block;
+      font-size: 0.8rem;
+      color: #555;
+    }
+    .testimonios {
+      padding: 2rem 1rem;
+      background-color: #FAFAFA;
+    }
     .swiper {
       width: 90%;
-      margin: 3rem auto;
+      margin: 2rem auto;
     }
     .swiper-slide {
       background-color: white;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      font-size: 0.95rem;
     }
     .footer {
       background-color: #333;
       color: white;
-      text
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .footer a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LM Vinilos</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#pedido">Pedir</a>
+    </nav>
+  </header>  <main>
+    <section class="hero">
+      <h2>El regalo más emocional que vas a dar este año</h2>
+      <p>Transformá tu canción favorita en una placa de vidrio única. Personalizá el tamaño, diseño y mensaje.</p>
+      <a href="#pedido"><button class="cta-btn">¡Quiero mi placa ahora!</button></a>
+    </section><section class="opciones-medidas">
+  <h3>Elegí el tamaño perfecto</h3>
+  <button>15x20 cm<small>Ideal para escritorios</small></button>
+  <button>20x25 cm<small>Perfecto para regalar</small></button>
+  <button>30x40 cm<small>Gran impacto visual</small></button>
+</section>
+
+<section id="testimonios" class="testimonios">
+  <h3 style="text-align:center">Nuestros clientes dicen:</h3>
+  <div class="swiper">
+    <div class="swiper-wrapper"></div>
+  </div>
+</section>
+
+  </main>  <footer class="footer">
+    <p>Seguinos en redes:</p>
+    <a href="https://www.facebook.com/share/15wkYuAX6M/" target="_blank">Facebook</a>
+    <a href="https://instagram.com/lmvinilos.rg" target="_blank">Instagram</a>
+  </footer>  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const reseñas = [
+        "Compré una placa Spotify para mi novio y quedó fascinado. ¡Hermoso trabajo!",
+        "Para el Día de la Madre, le regalamos una placa con nuestra canción. Lloró de emoción.",
+        "¡Perfecto para San Valentín! Llegó en tiempo y la calidad es excelente.",
+        "Mis hijos amaron ver la canción que escuchamos siempre impresa. Un recuerdo hermoso.",
+        "Muy buena atención. Todo personalizado tal cual lo pedí.",
+        "Lo encargué desde Río Gallegos y llegó rapidísimo. ¡Gracias!",
+        "Excelente calidad, y el diseño es tal cual lo imaginaba.",
+        "Una amiga me recomendó LM Vinilos y ahora yo también lo recomiendo.",
+        "El pedido fue fácil y rápido. Me encantó el resultado final.",
+        "Súper recomendable. ¡La atención fue de 10!"
+      ];
+
+      const wrapper = document.querySelector('.swiper-wrapper');
+      reseñas.forEach(texto => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.textContent = texto;
+        wrapper.appendChild(slide);
+      });
+
+      new Swiper('.swiper', {
+        loop: true,
+        autoplay: { delay: 4000 },
+        slidesPerView: 1,
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+    });
+  </script></body>
+</html>

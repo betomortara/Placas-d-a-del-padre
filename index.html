@@ -3,154 +3,146 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LM Vinilos - Día del Padre</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
       font-family: 'Playfair Display', serif;
       background-color: #ffffff;
-      color: #111;
-      text-align: center;
+      color: #000000;
+      margin: 0;
+      padding: 0;
     }
     header {
-      background-color: #003366;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #ffffff;
-      font-style: italic;
+      background: linear-gradient(to right, #0d0d0d, #0f52ba);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.6rem;
+      font-weight: bold;
     }
     .carousel {
       display: flex;
       overflow-x: auto;
       gap: 1rem;
       padding: 1rem;
-      background-color: #f0f0f0;
+      scroll-snap-type: x mandatory;
     }
     .carousel img {
-      height: 200px;
-      border-radius: 12px;
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      scroll-snap-align: start;
     }
-    .selector {
-      padding: 1rem;
+    .model-buttons {
+      text-align: center;
+      margin-top: 1rem;
     }
-    .selector h2 {
-      color: #003366;
-      font-size: 1.4rem;
-      font-style: italic;
-    }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1rem 0;
-    }
-    .buttons button {
-      background-color: #0055aa;
+    .model-buttons button {
+      background-color: #0f52ba;
+      color: white;
       border: none;
+      margin: 0.5rem;
+      padding: 0.7rem 1.2rem;
       border-radius: 20px;
-      color: white;
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
       cursor: pointer;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
-      transition: background 0.3s;
-    }
-    .buttons button:hover {
-      background-color: #003f80;
-    }
-    .pago {
-      margin-top: 1rem;
       font-size: 1rem;
-      color: #444;
-      font-style: italic;
     }
-    .cta-button {
-      margin: 2rem auto;
-      background-color: #00cc66;
-      border: none;
-      border-radius: 30px;
+    .options {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .options p {
+      font-size: 1.1rem;
+      margin: 0.5rem;
+    }
+    .buy-button {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .buy-button a {
+      background-color: #000000;
+      color: white;
       padding: 1rem 2rem;
-      color: white;
+      border-radius: 30px;
+      text-decoration: none;
       font-size: 1.2rem;
-      font-weight: bold;
-      font-family: 'Roboto', sans-serif;
-      cursor: pointer;
-      transition: background 0.3s;
     }
-    .cta-button:hover {
-      background-color: #00994d;
-    }
-    .mensaje-emotivo {
+    .testimonial-section {
+      padding: 2rem;
       background-color: #f9f9f9;
-      padding: 1.5rem;
-      color: #333;
-      font-size: 1.1rem;
-      font-style: italic;
-      border-radius: 12px;
-      margin: 1rem;
-      border-left: 5px solid #003366;
     }
-    .contador {
-      font-size: 1.1rem;
-      margin-top: 1rem;
-      color: #aa0000;
+    .testimonial-carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 1.5rem;
+      scroll-snap-type: x mandatory;
+    }
+    .testimonial {
+      min-width: 300px;
+      max-width: 320px;
+      padding: 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      scroll-snap-align: start;
+    }
+    .stars {
+      color: gold;
+    }
+    .social-buttons {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .social-buttons a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #0f52ba;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>LM Vinilos - Especial Día del Padre</h1>
-  </header>  <section class="carousel">
-    <img src="modelo1.jpg" alt="Modelo 1">
-    <img src="modelo2.jpg" alt="Modelo 2">
-    <img src="modelo3.jpg" alt="Modelo 3">
-    <img src="modelo4.jpg" alt="Modelo 4">
-  </section>  <section class="selector">
-    <h2>Elegí tu modelo</h2>
-    <div class="buttons">
-      <button onclick="seleccionarModelo('Modelo 1')">Modelo 1</button>
-      <button onclick="seleccionarModelo('Modelo 2')">Modelo 2</button>
-      <button onclick="seleccionarModelo('Modelo 3')">Modelo 3</button>
-      <button onclick="seleccionarModelo('Modelo 4')">Modelo 4</button>
-    </div><h2>Elegí el tamaño</h2>
-<div class="buttons">
-  <button onclick="seleccionarTamaño('20x30 cm - $18000')">20x30 cm - $18000</button>
-  <button onclick="seleccionarTamaño('15x20 cm - $15000')">15x20 cm - $15000</button>
-</div>
-
-  </section>  <div class="pago">
-    Medios de pago: Brubank, Transferencia, Efectivo, MercadoPago o QR.
-  </div>  <button class="cta-button" onclick="comprarPorWhatsapp()">
-    Comprar ahora por WhatsApp
-  </button>  <div class="contador">
-    Oferta válida hasta el 14 de junio. ¡No te la pierdas!
-  </div>  <div class="mensaje-emotivo">
-    Regalar una placa es mucho más que dar un objeto. Es inmortalizar un momento único con papá: una canción, una foto, un recuerdo imborrable. Es un homenaje desde el corazón para siempre.
-  </div>  <script>
-    let modeloSeleccionado = '';
-    let tamañoSeleccionado = '';
-
-    function seleccionarModelo(modelo) {
-      modeloSeleccionado = modelo;
-    }
-
-    function seleccionarTamaño(tamaño) {
-      tamañoSeleccionado = tamaño;
-    }
-
-    function comprarPorWhatsapp() {
-      if (!modeloSeleccionado || !tamañoSeleccionado) {
-        alert("Seleccioná un modelo y un tamaño para continuar.");
-        return;
-      }
-      const mensaje = `Hola! Quiero hacer un pedido del Día del Padre:\nModelo: ${modeloSeleccionado}\nTamaño: ${tamañoSeleccionado}`;
-      const url = `https://wa.me/5492966743381?text=${encodeURIComponent(mensaje)}`;
-      window.open(url, '_blank');
-    }
-  </script></body>
+    LM Vinilos - Especial Día del Padre
+  </header>  <div class="carousel">
+    <img src="images/modelo1.jpg" alt="Modelo 1">
+    <img src="images/modelo2.jpg" alt="Modelo 2">
+    <img src="images/modelo3.jpg" alt="Modelo 3">
+    <img src="images/modelo4.jpg" alt="Modelo 4">
+  </div>  <div class="model-buttons">
+    <button>Modelo 1</button>
+    <button>Modelo 2</button>
+    <button>Modelo 3</button>
+    <button>Modelo 4</button>
+  </div>  <div class="options">
+    <p><strong>Medida:</strong> 20x30 cm - $18.000 ARS</p>
+    <p><strong>Medida:</strong> 15x20 cm - $15.000 ARS</p>
+    <p><strong>Medios de Pago:</strong> Transferencia Brubank, efectivo, QR</p>
+  </div>  <div class="buy-button">
+    <a href="https://wa.me/5492966743381?text=Hola%20quiero%20comprar%20una%20placa%20personalizada%20para%20el%20D%C3%ADa%20del%20Padre">Comprar Ahora</a>
+  </div>  <div class="testimonial-section">
+    <h2 style="text-align:center; font-size:1.6rem;">Lo que opinan nuestros clientes</h2>
+    <div class="testimonial-carousel">
+      <!-- Aquí se insertan más de 30 reseñas -->
+      <div class="testimonial">
+        <p><strong>María López</strong> - 2 semanas atrás</p>
+        <p class="stars">★★★★★</p>
+        <p>Hermosa placa personalizada para el Día del Padre. Mi papá se emocionó hasta las lágrimas.</p>
+        <p><em>Respuesta:</em> ¡Gracias María! Qué alegría saberlo.</p>
+      </div>
+      <div class="testimonial">
+        <p><strong>Julián Pérez</strong> - 1 mes atrás</p>
+        <p class="stars">★★★★★</p>
+        <p>La placa de Spotify fue un golazo. Muy buena calidad y entrega rápida.</p>
+        <p><em>Respuesta:</em> ¡Gracias Julián por confiar en LM Vinilos!</p>
+      </div>
+      <!-- Agregar 30+ testimonios similares aquí... -->
+    </div>
+  </div>  <div class="social-buttons">
+    <a href="https://www.instagram.com/lmvinilos.rg" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/share/15wkYuAX6M/" target="_blank">Facebook</a>
+  </div>
+</body>
 </html>
